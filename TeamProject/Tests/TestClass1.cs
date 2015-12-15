@@ -28,5 +28,18 @@ namespace TeamProject.Tests
             Assert.That(good.detail, Is.EqualTo("Just an apple"));
             
         }
+        [Test]
+        public void TestGoodsDB()
+        {
+            GoodsDB db = new GoodsDB();
+            Assert.That(db.num, Is.EqualTo(0));
+
+            Goods good = new Goods();
+            db.Add(good);
+            Assert.That(db.num, Is.EqualTo(1));
+
+            db.Clear();
+            Assert.That(db.num, Is.EqualTo(0));
+        }
     }
 }

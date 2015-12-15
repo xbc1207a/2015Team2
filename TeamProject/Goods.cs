@@ -38,7 +38,7 @@ namespace TeamProject
         }
       
   
-// ----------------------------------------------------------------------   Private
+    // --------------------------------------------------------------   Private
 
         private string name_ ;
         private int price_ ;
@@ -48,6 +48,23 @@ namespace TeamProject
     
     }
 
+    class GoodsDB {
+
+        public int num { get { return database_.Count; } }
+        public void Add( Goods good ){
+            database_.Add(good) ;
+        }
+        public void Remove(Goods good) {
+            database_.Remove(good);
+        }
+        public void Clear() {
+            database_.Clear();
+        }
+
+
+    // --------------------------------------------------------------   Private
+        private List<Goods> database_ = new List<Goods>();
+    }
 
 
 }
