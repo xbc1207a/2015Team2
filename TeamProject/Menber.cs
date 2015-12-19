@@ -50,6 +50,7 @@ namespace TeamProject
           public void SetPhoneNum(string PhoneNum) { phonenum_ = PhoneNum; }
           public void SetOnlineState(bool State) { isOnline_ = State; }
 
+          public List<Goods> buylist;
           //  private  
           private string accountName_;
           private string safetycode_;    // 注意：存 "安全碼" 非密碼
