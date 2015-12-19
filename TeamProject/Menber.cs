@@ -23,12 +23,12 @@ namespace TeamProject
                phonenum_ = phonenum;
           }
 
-          public string AccountName() { return accountName_; }
-          public string SafetyCode() { return safetycode_; }
-          public string UserName() { return userName_; }
-          public string Email() { return email_; }
-          public string Id() { return id_; }
-          public string PhoneNum() { return phonenum_; }
+          public string accountname  { get { return accountName_; }  }
+          public string safetycode { get { return safetycode_; } }
+          public string username { get { return userName_; } }
+          public string email { get { return email_; } }
+          public string id { get { return id_; } }
+          public string phonenum { get { return phonenum_; } }
           public bool isOnline() { return isOnline_; }
 
           public void Clear()
