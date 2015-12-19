@@ -51,11 +51,19 @@ namespace TeamProject
     class GoodsDB {
 
         public int num { get { return database_.Count; } }
-        public void Add( Goods good ){
+        public void Add( Goods good) {
             database_.Add(good) ;
         }
         public void Remove(Goods good) {
             database_.Remove(good);
+        } 
+        public Goods Find(string name) {
+            foreach( Goods good in database_ ){
+                if( good.name.Equals(name)){
+                    return good ;
+                }
+            }
+            throw new ArgumentNullException() ;
         }
         public void Clear() {
             database_.Clear();
