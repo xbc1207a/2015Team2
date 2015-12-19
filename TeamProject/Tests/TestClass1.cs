@@ -75,7 +75,7 @@ namespace TeamProject.Tests
           public void TestMemberClass()
           {
                Member m = new Member();
-               Assert.That(m.AccountName, Is.EqualTo(""));
+               Assert.That(m.accountname, Is.EqualTo(""));
                m.SetAccountName("Idiot");
                m.SetSafetyCode("1234");
                m.SetUserName("Amercan Fat");
@@ -83,12 +83,12 @@ namespace TeamProject.Tests
                m.SetId("A123321444");
                m.SetPhoneNum("0912345678");
                m.SetOnlineState(true);
-               Assert.That(m.AccountName, Is.EqualTo("Idiot"));
-               Assert.That(m.SafetyCode, Is.EqualTo("1234"));
-               Assert.That(m.UserName, Is.EqualTo("Amercan Fat"));
-               Assert.That(m.Email, Is.EqualTo("Idiot@gmai.com"));
-               Assert.That(m.Id, Is.EqualTo("A123321444"));
-               Assert.That(m.PhoneNum, Is.EqualTo("0912345678"));
+               Assert.That(m.accountname, Is.EqualTo("Idiot"));
+               Assert.That(m.safetycode, Is.EqualTo("1234"));
+               Assert.That(m.username, Is.EqualTo("Amercan Fat"));
+               Assert.That(m.email, Is.EqualTo("Idiot@gmai.com"));
+               Assert.That(m.id, Is.EqualTo("A123321444"));
+               Assert.That(m.phonenum, Is.EqualTo("0912345678"));
                Assert.That(m.isOnline, Is.EqualTo(true));
           }
 
