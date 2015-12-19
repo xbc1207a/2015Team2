@@ -45,15 +45,6 @@ namespace TeamProject.Tests
 
 
 
-
-
-
-
-
-
-
-
-
         Goods AGood(string name, int pri, int amount)
         {
             Goods g = new Goods();
@@ -80,6 +71,26 @@ namespace TeamProject.Tests
 
         }
 
+          [Test]
+          public void TestMemberClass()
+          {
+               Member m = new Member();
+               Assert.That(m.AccountName, Is.EqualTo(""));
+               m.SetAccountName("Idiot");
+               m.SetSafetyCode("1234");
+               m.SetUserName("Amercan Fat");
+               m.SetEmail("Idiot@gmai.com");
+               m.SetId("A123321444");
+               m.SetPhoneNum("0912345678");
+               m.SetOnlineState(true);
+               Assert.That(m.AccountName, Is.EqualTo("Idiot"));
+               Assert.That(m.SafetyCode, Is.EqualTo("1234"));
+               Assert.That(m.UserName, Is.EqualTo("Amercan Fat"));
+               Assert.That(m.Email, Is.EqualTo("Idiot@gmai.com"));
+               Assert.That(m.Id, Is.EqualTo("A123321444"));
+               Assert.That(m.PhoneNum, Is.EqualTo("0912345678"));
+               Assert.That(m.isOnline, Is.EqualTo(true));
+          }
 
 
 
@@ -88,5 +99,5 @@ namespace TeamProject.Tests
 
 
 
-    }
+     }
 }
